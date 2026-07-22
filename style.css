@@ -1,11 +1,32 @@
-
-div{
-    height:300px;
-    width:300px;
-    background-color:crimson;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cambria;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: black;
 
 }
-H1{
-    color: red;
+#box1{
+    height:200px;
+    width: 200px;
+    background-color: crimson;
+    border: 2px solid #fff;
 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+#box2{
+    height:200px;
+    width: 200px;
+    background-color: royalblue;
+    border: 2px solid #fff;
+    
 }
