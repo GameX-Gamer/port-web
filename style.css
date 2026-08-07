@@ -22,7 +22,7 @@ body {
     position: sticky;
     top: 0;
     background: transparent;
-    box-shadow: 0 10px 20px color(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     z-index: 100;
 }
@@ -52,22 +52,45 @@ body {
 }
 
 .navbar-container .navbar-menu li a{
+    position: relative;
+    display:inline-block;
     text-decoration: none;
     color: white;
     font-size: 500;
-    padding: 3px 20px 0px 0px;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    transition: all 0.7s ease;
+    padding: 8px 0;
+    transition: all 0.3s ease;
     white-space: nowrap;
 }
-
-.navbar-container .navbar-menu li a:hover {
-    color: rgb(35, 0, 59);
-    background: lightblue;
-    border: 2px solid white;
+.navbar-container .navbar-menu li a::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-5px;
+    height:2px;
+    width:0;
+    background:linear-gradient(
+        90deg,
+        #8bd7ff,
+        white,
+        #8bd7ff
+    );
+    transform:translateX(-50%);
+    transition:width 0.3s ease;
+        box-shadow:
+        0 0 8px rgba(150,220,255,.7),
+        0 0 18px rgba(150,220,255,.4);
 }
+.navbar-container .navbar-menu li a:hover::after,
+.navbar-container .navbar-menu li a.active::after{
+    width:100%;
+}
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active{
+    color:#e5f7fe;
+}
+
 .navbar-toggle{
+    display: none;
     background: transparent;
     padding: 10px;
     border: none;
@@ -81,4 +104,49 @@ body {
     background: white;
     transition: all 0.3s ease-in-out;
 
+}
+@media(max-width: 880px) {
+    .navbar {
+        backdrop-filter:none;
+    }
+    .navbar-container .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem 0 0;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+    
+    .navbar-container .navbar-menu.active{
+        display: flex;
+    }
+    .navbar-toggle{
+        display: block;
+        z-index: 99;
+    }
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+@media (max-width: 480pc) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+    .navbar-container .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
 }
