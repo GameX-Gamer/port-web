@@ -2,28 +2,83 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: cambria;
+    font-family:Cambria;   
 }
-html,
-body{
-    height: 100%;
+body {
+    font-family: "jost", serif;
+    min-height: 100vh;
+    background-image: url(./assets/images/0001.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
     width: 100%;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    box-shadow: 0 10px 20px color(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 100;
 }
-H1{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate (-50%, -50%);
-    text-align: center;
-    font-size: 60px;
-    font-weight: 200;
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 2000px;
 }
-h1 span{
-    font-size: 60px;
-    border-radius: 10px;
+
+.navbar-logo {
+    font-size: 2rem;
     font-weight: 600;
-    background-color: lightseagreen;
-    color: #fff;
-    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-container .navbar-menu{
+    display:flex;
+    text-align: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-container .navbar-menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 500;
+    padding: 3px 20px 0px 0px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover {
+    color: rgb(35, 0, 59);
+    background: lightblue;
+    border: 2px solid white;
+}
+.navbar-toggle{
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: white;
+    transition: all 0.3s ease-in-out;
 
 }
