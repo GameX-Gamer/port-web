@@ -12,7 +12,10 @@ body {
     background-position: center center;
     background-size: cover;
 }
-
+@font-face {
+    font-family:gara;
+    src: url(./assets/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf);
+}
 .navbar{
     display: flex;
     align-items: center;
@@ -195,4 +198,20 @@ body {
     .navbar-call-to-action{
         display: none;
     }
+}
+.main-sec{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+}
+.born{
+    font-size: 28vh;
+    max-width: 95%;
+    color: white;
+    font-family: gara;
+    font-weight: 100;
+    letter-spacing:0;
+    padding: 3vh 0 0 9vh;
 }
