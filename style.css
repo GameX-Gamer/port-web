@@ -219,6 +219,7 @@ body {
 .main-sec-right{
     width: 50%;
     height:100vh;
+    position: relative;
 }
 .born{
     font-size: 28vh;
@@ -273,9 +274,8 @@ body {
     font-family:Poppins;
     letter-spacing: 0px;
     position: absolute;
-    top:28vh;
     right:8vw;
-    top:100vh;
+    top:92vh;
 }
 .get-started-text{
     font-size: 2.5vh;
@@ -290,4 +290,24 @@ body {
 }
 .get-logo{
     font-size: 3vh;
+}
+@media (max-width: 600px) {
+    .born{
+        font-size: 12vh;
+    }
+    .nature{
+        font-size: 12vh;
+        right:16vh;
+        top:40vh
+    }
+    .built-for{
+        font-size:4.5vh;
+        line-height:4vh;
+        top:85vh;
+    }
+    .transcend{
+        font-size:4.5vh;
+        line-height: 4vh;
+        top:100vh;
+    }
 }
