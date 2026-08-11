@@ -221,17 +221,30 @@ body {
     height:100vh;
     position: relative;
 }
-.born span{
+.born {
     font-size: 28vh;
     max-width: 95%;
     color: white;
     font-family: gara;
     font-weight: 100;
     letter-spacing:0;
+    white-space: nowrap;
+    transform: translateY(120%);
+    animation:bornSlide 0.8s ease-out forwards;
+}
+.wrapper{
     position: absolute;
     top:5vh;
     left: 3vw;
-    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes bornSlide{
+    from{
+        transform: translateY(120%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 .nature{
     font-size: 28vh;
