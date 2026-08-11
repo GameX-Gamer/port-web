@@ -7,7 +7,7 @@
 body {
     font-family: "jost", serif;
     min-height: 100vh;
-    background-image: url(./assets/images/0001.png);
+    background-image: url(./assets/images/Screenshot\ 2026-08-10\ 224524.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -15,6 +15,14 @@ body {
 @font-face {
     font-family:gara;
     src: url(./assets/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Google-sans;
+    src: url(./assets/fonts/Google_Sans/GoogleSans-VariableFont_GRAD\,opsz\,wght.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(./assets/fonts/Poppins/Poppins-Light.ttf);
 }
 .navbar{
     display: flex;
@@ -200,11 +208,17 @@ body {
     }
 }
 .main-sec{
+    display: flex;
+    flex-direction: row;
+}
+.main-sec-left{
+    width: 50%;
+    height:100vh;
     position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    align-items: center;
+}
+.main-sec-right{
+    width: 50%;
+    height:100vh;
 }
 .born{
     font-size: 28vh;
@@ -213,5 +227,67 @@ body {
     font-family: gara;
     font-weight: 100;
     letter-spacing:0;
-    padding: 3vh 0 0 9vh;
+    position: absolute;
+    top:5vh;
+    left: 3vw;
+    white-space: nowrap;
+}
+.nature{
+    font-size: 28vh;
+    max-width: 95%;
+    color: white;
+    font-family: gara;
+    font-weight: 100;
+    letter-spacing:0;
+    position: absolute;
+    top:47vh;
+    right: 3.5vw;
+    white-space: nowrap;
+}
+.transcend{
+    font-size: 5vh;
+    max-width:95%;
+    color:white;
+    font-family:Poppins;
+    letter-spacing: 0px;
+    position: absolute;
+    left:3.5vw;
+    top:75vh;
+    line-height:5vh;
+}
+.built-for{
+    font-size: 5vh;
+    max-width:95%;
+    color:white;
+    font-family:Poppins;
+    letter-spacing: 0px;
+    position: absolute;
+    top:28vh;
+    right:3.5vw;
+    line-height:5vh;
+}
+.main-sec-description{
+    font-size: 2vh;
+    max-width:95%;
+    color:white;
+    font-family:Poppins;
+    letter-spacing: 0px;
+    position: absolute;
+    top:28vh;
+    right:8vw;
+    top:100vh;
+}
+.get-started-text{
+    font-size: 2.5vh;
+    max-width:95%;
+    color:white;
+    font-family:Poppins;
+    letter-spacing: 0px;
+    position: absolute;
+    left:3.5vw;
+    top:90.5vh;
+    text-decoration: underline;
+}
+.get-logo{
+    font-size: 3vh;
 }
