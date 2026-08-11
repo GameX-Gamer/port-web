@@ -221,7 +221,7 @@ body {
     height:100vh;
     position: relative;
 }
-.born{
+.born span{
     font-size: 28vh;
     max-width: 95%;
     color: white;
@@ -274,7 +274,7 @@ body {
     font-family:Poppins;
     letter-spacing: 0px;
     position: absolute;
-    right:8vw;
+    right:7vw;
     top:92vh;
 }
 .get-started-text{
@@ -297,17 +297,23 @@ body {
     }
     .nature{
         font-size: 12vh;
-        right:16vh;
-        top:40vh
+        right:24vw;
+        top:46vh
     }
     .built-for{
         font-size:4.5vh;
         line-height:4vh;
-        top:85vh;
+        top:70vh;
     }
     .transcend{
         font-size:4.5vh;
         line-height: 4vh;
-        top:100vh;
+        top:80vh;
+    }
+    .get-started-text{
+        top:95vh;
+    }
+    .main-sec-description{
+    display: none;
     }
 }
