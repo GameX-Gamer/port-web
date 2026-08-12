@@ -265,23 +265,43 @@ body {
     color:white;
     font-family:Poppins;
     letter-spacing: 0px;
+    line-height:5vh;
+}
+.wrapper2{
     position: absolute;
     left:3.5vw;
     top:75vh;
-    line-height:5vh;
+    height: 10vh;
+    overflow:hidden;
+}
+.transcend-1,
+.transcend-2{
+    display: block;
+    font-family: Poppins;
+}
+.transcend-1{
+    transform:translateY(-100%);
+    animation: builtTop 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.transcend-2{
+    transform:translateY(100%);
+    animation: builtBottom 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .built-for {
     font-size: 5vh;
     color: white;
     font-family: Poppins;
-    line-height: 1.6vh;
+    line-height: 5vh;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top:28vh;
-    right:3.5vw;
 }
-
+.wrapper1{
+    position: absolute;
+    top: 28vh;
+    right: 3.5vw;
+    height: 10vh;
+    overflow:hidden;
+}
 .built-for-1,
 .built-for-2 {
     display: block;
@@ -289,11 +309,11 @@ body {
 }
 .built-for-1{
     transform: translateY(-100%);
-    animation: builtTop 1s cubic-bezier(0.165, 0.84, 0.44, 1)
+    animation: builtTop 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .built-for-2{
     transform: translateY(100%);
-    animation: builtBottom 1s cubic-bezier(0.165, 0.84, 0.44, 1)
+    animation: builtBottom 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 @keyframes builtTop{
     from{
@@ -317,9 +337,34 @@ body {
     color:white;
     font-family:Poppins;
     letter-spacing: 0px;
+}
+.wrapper3{
     position: absolute;
-    right:7vw;
+    right:6vw;
     top:92vh;
+    height:10vh;
+    overflow: hidden;
+}
+.main-sec-description-1,
+.main-sec-description-2{
+    display: block;
+    font-family: poppins;
+}
+.main-sec-description-1{
+    transform: translatex(-100%);
+    animation: slideRight 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.main-sec-description-2{
+    transform: translatex(-100%);
+    animation: slideRight 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes slideRight{
+    from{
+        transform: translatex(-100%);
+    }
+    to{
+        transform: translatex(0%);
+    }
 }
 .get-started-text{
     font-size: 2.5vh;
@@ -327,13 +372,44 @@ body {
     color:white;
     font-family:Poppins;
     letter-spacing: 0px;
+    text-decoration: underline;
+}
+.wrapper4{
     position: absolute;
     left:3.5vw;
     top:90.5vh;
+    height:5vh;
+    overflow: hidden;
+    display:flex;
+    align-items: center;
+    gap: 0.3vw;
+}
+.get-started-text-1{
     text-decoration: underline;
+}
+.get-started-text-1,
+.get-started-text-2{
+    display:block;
+    font-family: Poppins;
 }
 .get-logo{
     font-size: 3vh;
+}
+.get-started-text-1{
+    transform: translateY(100%);
+    animation: builtBottom 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.get-started-text-2{
+    transform: translateY(100%);
+    animation: slowRise 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes slowRise{
+    from{
+        transform: translateY(300%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 @media (max-width: 600px) {
     .born{
