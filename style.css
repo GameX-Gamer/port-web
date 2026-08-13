@@ -227,10 +227,32 @@ body {
     color: white;
     font-family: gara;
     font-weight: 100;
-    letter-spacing:0;
+    letter-spacing:-0.11em;
     white-space: nowrap;
+}
+.born span{
+    display: inline-block;
+    font-family: gara;
     transform: translateY(100%);
-    animation:bornSlide 0.8s ease-out forwards;
+    animation: bornSlide 0.8s ease-out forwards;
+}
+.born span:nth-child(1){
+    animation-delay: 0.4s;
+}
+.born span:nth-child(2){
+    animation-delay: 0.6s;
+}
+.born span:nth-child(3){
+    animation-delay: 0.8s;
+}
+.born span:nth-child(4){
+    animation-delay: 1s;
+}
+.born span:nth-child(6){
+    animation-delay: 1.2s;
+}
+.born span:nth-child(7){
+    animation-delay: 1.4s;
 }
 .wrapper{
     position: absolute;
@@ -238,6 +260,7 @@ body {
     left: 3vw;
     overflow: hidden;
     height: 26.6vh;
+    width: 53vw;
 }
 @keyframes bornSlide{
     from{
@@ -253,11 +276,40 @@ body {
     color: white;
     font-family: gara;
     font-weight: 100;
-    letter-spacing:0;
+    letter-spacing:-0.11em;
+    white-space: nowrap;
+}
+.nature span{
+    display: inline-block;
+    font-family: gara;
+    transform: translateY(100%);
+    animation: bornSlide 0.8s ease-out forwards;
+}
+.nature span:nth-child(1){
+    animation-delay: 1s;
+}
+.nature span:nth-child(2){
+    animation-delay: 1.2s;
+}
+.nature span:nth-child(3){
+    animation-delay: 1.4s;
+}
+.nature span:nth-child(4){
+    animation-delay: 1.6s;
+}
+.nature span:nth-child(5){
+    animation-delay: 1.8s;
+}
+.nature span:nth-child(6){
+    animation-delay: 2s;
+}
+.forgotten-wrapper{
     position: absolute;
     top:47vh;
     right: 3.5vw;
-    white-space: nowrap;
+    overflow:hidden;
+    height: 26.6vh;
+    width: 53vw;
 }
 .transcend{
     font-size: 5vh;
@@ -282,10 +334,12 @@ body {
 .transcend-1{
     transform:translateY(-100%);
     animation: builtTop 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: 0.8s;
 }
 .transcend-2{
     transform:translateY(100%);
     animation: builtBottom 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: 1.2s;
 }
 .built-for {
     font-size: 5vh;
@@ -310,10 +364,12 @@ body {
 .built-for-1{
     transform: translateY(-100%);
     animation: builtTop 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: 0.8s;
 }
 .built-for-2{
     transform: translateY(100%);
     animation: builtBottom 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: 1.2s;
 }
 @keyframes builtTop{
     from{
@@ -353,10 +409,12 @@ body {
 .main-sec-description-1{
     transform: translatex(-100%);
     animation: slideRight 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: 1.4s;
 }
 .main-sec-description-2{
     transform: translatex(-100%);
     animation: slideRight 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: 1.4s;
 }
 @keyframes slideRight{
     from{
@@ -398,10 +456,12 @@ body {
 .get-started-text-1{
     transform: translateY(100%);
     animation: builtBottom 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: 1.2s;
 }
 .get-started-text-2{
     transform: translateY(100%);
     animation: slowRise 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    animation-delay: 1.2s;
 }
 @keyframes slowRise{
     from{
