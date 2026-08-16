@@ -520,6 +520,10 @@ body {
     align-items: center;
     text-align: center;
 }
+.about-wrapper-1{
+    align-items: center;
+    position: absolute;
+}
 .about-sec-center{
     display: flex;
     flex-direction: column;
@@ -546,13 +550,6 @@ body {
     display: flex;
     align-items: center;
 }
-.bottom-right{
-    position: absolute;
-    left: 0px;
-    right: 10vh;
-    top:116vh;
-    justify-content: right;
-}
 .who{
     position:absolute;
     font-size: 2vh;
@@ -560,7 +557,26 @@ body {
     color:white;
     font-family:Poppins;
     letter-spacing: 0px;
-    top: 16vh
+    text-align: center;
+    top: 16vh;
+    left:50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    white-space: nowrap;
+}
+.revel-sec.animate .who{
+    animation: Uprising 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes Uprising{
+    from{
+        transform:translate(-50%, 200%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(-50%, 0);
+        transform:translateY(0);
+        opacity: 1;
+    }
 }
 .revel-sec-heading{
     position:absolute;
@@ -571,7 +587,7 @@ body {
     font-weight: 100;
     line-height: 6.8vh;
     letter-spacing: 0px;
-    top: 23vh
+    top: 23vh;
 }
 .revel-sec-description{
     position:absolute;
@@ -581,6 +597,8 @@ body {
     font-family:Poppins;
     letter-spacing: 0px;
     top: 70vh;
+    left:50%;
+    transform: translateX(-50%);
 }
 .bottom-left span{
     position:absolute;
@@ -621,8 +639,29 @@ body {
     color: white;
     font-size:5vh;
 }
+
+.bottom-right-wrapper{
+    position: absolute;
+    left: 0px;
+    right: 10vh;
+    top:117vh;
+    overflow: hidden;
+}
 .bottom-right{
+    justify-content: right;
     font-size: 2vh;
     color: white;
     font-family: Poppins;
+    transform: translateY(-100%);
+}
+.revel-sec.animate .bottom-right{
+    animation: bottomRightDescent 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes bottomRightDescent {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(-20%);
+    }
 }

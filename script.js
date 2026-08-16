@@ -6,3 +6,8 @@ navbarToggle.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
 });
 
+const aboutSection = document.querySelector(".revel-sec")
+const observer = new IntersectionObserver(() => {
+    aboutSection.classList.add("animate");
+})
+observer.observe(aboutSection)
