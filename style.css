@@ -543,7 +543,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5vw;
+    gap: 0.1vw;
 }
 .bottom-left,
 .bottom-right{
@@ -666,21 +666,38 @@ body {
     }
 }
 .revel-sec-description{
-    position:absolute;
+    display:block;
     font-size: 2vh;
     max-width:95%;
     color:white;
     font-family:Poppins;
     letter-spacing: 0px;
-    top: 70vh;
-    left:50%;
-    transform: translateX(-50%);
+    transform: translateY(210%);
+    animation: bornSlide 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
+@keyframes bornSlide{
+    from{
+        transform: translateY(210%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+.rev-dis-wrapper{
+    position: absolute;
+    top: 70vh;
+    left:51.2%;
+    height: 8.5vh;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
 .bottom-left span{
     display:block;
     color: white;
     font-size: 2.5vh;
     font-weight: 300;
+    line-height: 2.8vh;
     transform: translateY(100%);
     animation: bornSlide 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 } 
@@ -688,7 +705,7 @@ body {
     animation-delay:0.5s;
 }
 .bottom-left span:nth-child(2){
-    animation-delay:2.5s;
+    animation-delay:1.5s;
 }
 .idk-wrapper-no{
     position:absolute;
@@ -716,18 +733,36 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5vw;
-    height: 5vw;
+    width: 5.5vw;
+    height: 5.5vw;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 50%;
     border:1.5px solid white;
+}
+.hollow-circle-1,
+.hollow-circle-2,
+.hollow-circle-3{
+    transform: translateY(100%);
+    animation: bornSlide 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+.hollow-circle-1{
+    animation-delay:0.5s;
+}
+.hollow-circle-2{
+    animation-delay:0.7s;
+}
+.hollow-circle-3{
+    animation-delay:1s;
+}
+.bottom-center{
+    overflow: hidden;
 }
 .bottom-center span{
     display: flex;
     align-items: center;
     justify-content:center;
     color: white;
-    font-size:5vh;
+    font-size:5.5vh;
 }
 
 .bottom-right-wrapper{
