@@ -7,7 +7,17 @@ navbarToggle.addEventListener('click', () => {
 });
 
 const aboutSection = document.querySelector(".revel-sec")
-const observer = new IntersectionObserver(() => {
-    aboutSection.classList.add("animate");
-})
+const observer = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                aboutSection.classList.add("animate");
+                observer.unobserve(aboutSection);
+            }
+        });
+    },
+    {
+        threshold: 0.2
+    }
+);
 observer.observe(aboutSection)

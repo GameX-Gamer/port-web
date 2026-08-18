@@ -673,9 +673,9 @@ body {
     font-family:Poppins;
     letter-spacing: 0px;
     transform: translateY(210%);
-    animation: bornSlide 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    animation: revel-sec-Slide 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
-@keyframes bornSlide{
+@keyframes revel-sec-Slide{
     from{
         transform: translateY(210%);
     }
@@ -692,7 +692,7 @@ body {
     overflow: hidden;
 }
 
-.bottom-left span{
+.idk-wrapper-no span{
     display:block;
     color: white;
     font-size: 2.5vh;
@@ -701,10 +701,10 @@ body {
     transform: translateY(100%);
     animation: bornSlide 1s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 } 
-.bottom-left span:nth-child(1){
+.idk-wrapper-no span:nth-child(1){
     animation-delay:0.5s;
 }
-.bottom-left span:nth-child(2){
+.idk-wrapper-no span:nth-child(2){
     animation-delay:1.5s;
 }
 .idk-wrapper-no{
@@ -713,15 +713,6 @@ body {
     left: 15vw;
     height: 5.6vh;
     overflow: hidden;
-}
-.bottom-left strong{
-    position:absolute;
-    color: white;
-    font-size: 15vh;
-    top: 100vh;
-    left:3vw;
-    font-family: gara;
-    font-weight: 100;
 }
 .bottom-center button {
     background: none;
@@ -789,4 +780,34 @@ body {
     to{
         transform: translateY(-25%);
     }
+}
+.number {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    top: 100vh;
+    left: 3vw;
+}
+
+.plus,
+.seven {
+    color: white;
+    font-size: 15vh;
+    font-family: gara;
+    font-weight: 100;
+}
+
+.eight {
+    display: flex;
+    flex-direction: column;
+}
+
+.eight span {
+    display: block;
+    height: 15vh;
+    line-height: 15vh;
+    color: white;
+    font-size: 15vh;
+    font-family: gara;
+    font-weight: 100;
 }
