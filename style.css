@@ -781,33 +781,50 @@ body {
         transform: translateY(-25%);
     }
 }
-.number {
+.number{
     display: flex;
     align-items: flex-start;
-    position: absolute;
+    position:absolute;
     top: 100vh;
-    left: 3vw;
+    left:3vw;
 }
-
-.plus,
-.seven {
+.plus{
     color: white;
-    font-size: 15vh;
+    font-size: 16vh;
     font-family: gara;
     font-weight: 100;
 }
-
-.eight {
-    display: flex;
+.seven{
+    color: white;
+    font-size: 16vh;
+    font-family: gara;
+    font-weight: 100;
+}
+.eight{
+    position: relative;
+    display:flex;
     flex-direction: column;
+    top: 7vh;
+    height:16vh;
+    width: 5vw;
+    overflow: hidden;
 }
-
-.eight span {
+.eight span{
     display: block;
-    height: 15vh;
-    line-height: 15vh;
-    color: white;
-    font-size: 15vh;
+    height: 15.5vh;
+    line-height: 16vh;
+    transform: translateY(-2vh);
+    color:white;
+    font-size:16vh;
     font-family: gara;
     font-weight: 100;
+    animation: countRoll 3s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+@keyframes countRoll{
+    from{
+        transform: translateY(-2vh);
+    }
+    to{
+        transform: translateY(-96vh);
+    }
 }
