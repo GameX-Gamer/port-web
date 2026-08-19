@@ -21,3 +21,18 @@ const observer = new IntersectionObserver(
     }
 );
 observer.observe(aboutSection)
+
+gsap.registerPlugin(ScrollTrigger);
+const video = document.getElementById("bg-video");
+video.addEventListener("loadedmetadata", () => {
+    gsap.to(video, {
+        currentTime: video.duration,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".scroll-spacing",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true
+        }
+    });
+});
