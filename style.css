@@ -848,8 +848,9 @@ body {
     }
 }
 .case-study-sec{
-    display: flex;
-    min-height: 120vh;
+    visibility: hidden;
+    display: none;
+    min-height: 12vh;
     width: 100%;
     position:relative;
     overflow: hidden;
