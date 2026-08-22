@@ -209,7 +209,7 @@ body {
     flex-direction: row;
     position: relative;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
     background: #050505;
     z-index: 1;
 }
