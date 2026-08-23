@@ -67,6 +67,8 @@ function drawFrame(index){
     const height = img.height * scale;
     const x = (canvas.width - width) / 2;
     const y = (canvas.height - height) / 2;
+    
+    ctx.imageSmoothingQuality = "high";
 
     ctx.drawImage( img, x, y, width, height);
 }
