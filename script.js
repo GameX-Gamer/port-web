@@ -1,3 +1,17 @@
+const lenis = new Lenis({
+    smoothWheel: true,
+    lerp: 0.08
+});
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
+
+
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navbarMenu = document.querySelector('.navbar-menu')
 
@@ -160,4 +174,22 @@ document.addEventListener("DOMContentLoaded", () => {
             scrub: true
         },
     });
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const textElement = document.querySelector('.end-text');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Unfreezes the CSS animation the moment it scrolls into view
+                textElement.style.animationPlayState = 'running';
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, { threshold: 0.15 }); // Triggers when 15% of the element is visible
+
+    const wrapper = document.querySelector('.end-wrapper');
+    if (wrapper) {
+        observer.observe(wrapper);
+    }
 });

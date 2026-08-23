@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    /*font*/
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -21,12 +21,15 @@
                 <span class="bar"></span>
             </button>
             <ul class="navbar-menu">
-                <li><a href="#" class="active">WORK (12)</a></li>
-                <li><a href="#">CASE STUDY</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">STUDIO</a></li>
+                <li><a href="#work" class="active">WORK (12)</a></li>
+                <li><a href="#case-study">CASE STUDY</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#studio">STUDIO</a></li>
             </ul>
-            <a href="#" class="navbar-call-to-action">
+            <a 
+            href="https://wa.me/919015246603?text=Hey%20Gx%20Art!%20I%27d%20like%20to%20work%20with%20you."
+            class="navbar-call-to-action"
+            target="_blank">
                 <span class="cta-logo">
                     <i class="ri-arrow-right-up-line"></i>
                 </span>
@@ -34,7 +37,7 @@
             </a>
         </div>
     </nav>
-    <div class="main-sec">
+    <div class="main-sec" id="work">
         <div class="video-canvas">
             <canvas id="bg-canvas"></canvas>
         </div>
@@ -96,7 +99,7 @@
         </div>
     </div>
     <div class="video-spacer"></div>
-    <div class="revel-sec">
+    <div class="revel-sec" id="about">
         <div class="about-sec-main">
             <div class="about-wrapper-1">
                 <div class="who">Who We Are</div>
@@ -193,7 +196,7 @@
             CHARTS.
         </div>
     </div>
-    <div class="case-sec">
+    <div class="case-sec" id="case-study">
         <section class="spotlight">
             <div class="row">
                 <div class="diff-image">
@@ -207,10 +210,9 @@
                 <div class="column">
                     <div class="card">
                         <h2>A cleaner way to handle incoming updates</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, quaerat ut nihil, repudiandae
-                            eaque numquam nostrum, necessitatibus voluptas totam quibusdam dolores molestiae reprehenderit in sunt. 
-                            Amet inventore, iure incidunt nihil ipsam natus qui maiores commodi alias, quidem, molestias dolores? 
-                            Praesentium, quia odit? Quo maiores facere quisquam similique deserunt! Dicta, laborum.</p>
+                        <p>Forging the pipeline where physical engineering meets real-time digital art. From hand-crafting full-metal
+                            armor replicas to assembling complex 3D asset workflows, I structure chaotic creative ideas into pristine,
+                            production-ready interactive systems.
                     </div>
                 </div>
             </div>
@@ -219,9 +221,10 @@
                     <div class="card">
                         <h2>Built for increasing<br>
                             information demands</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur,
-                        adipisicing elit. Explicabo, quaerat ut nihil,
-                        repudiandae eaque.
+                        <p>Built for high-data complexity. Whether rendering procedural
+                            worlds in Blender, calculating cosmic distances, or optimizing
+                            custom game engines, my architecture scales seamlessly across 
+                            massive cross-disciplinary projects.
                         </p>
                     </div>
                 </div>
@@ -237,18 +240,18 @@
                     <div class="card">
                         <h2>Designed for<br>
                             clarity</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Explicabo, quaerat ut nihil,
-                            repudiandae eaque.
+                        <p>Stripping away the technical noise. I translate
+                            complex mathematical systems, physical mechanics,
+                            and scientific curiosity into striking visual 
+                            forms that balance organic elegance with rigorous precision.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="diff-image">
-                    <img src="./assets/images/6861232.jpg">
+                <div class="last-image">
+                    <img src="./assets/images/iresedent_image 5.png">
                 </div>
-            </div>
             <div class="svg-path">
                 <svg width="223" height="462" 
                     viewBox="0 0 223 462" 
@@ -257,16 +260,23 @@
                     <path 
                         id="stroke-path"
                         d="M127.039 17.5001C87.0393 18.5001 28.0394 32.5001 28.0394 102.5C28.0394 172.5 238.039 133.5 200.039 263.5C162.039 393.5 -28.9606 304.5 28.0394 244.5C85.0393 184.5 188.039 368.5 120.039 444.5" 
-                        stroke="#ff7e31" 
+                        stroke="#FF7A2C" 
                         stroke-width="35" 
                         stroke-linecap="round"/>
                     </svg>
                     
                 </div>
         </section>
-
+        <div class="end-wrapper">
+            <div class="end-text">
+                "From hammering physical stainless steel to orchestrating digital physics.
+                Let’s engineer the impossible."
+            </div>
+        </div>
+    </div>
         <section class="End"></section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.8/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>

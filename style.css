@@ -9,6 +9,9 @@ body {
     min-height: 100vh;
     background-color: #050505;
 }
+html {
+    scroll-behavior: smooth;
+}
 @font-face {
     font-family:gara;
     src: url(./assets/fonts/Cormorant_Garamond/CormorantGaramond-VariableFont_wght.ttf);
@@ -999,6 +1002,15 @@ body {
     margin-right:40vh;
     margin-left: 28vh;
 }
+.last-image img{
+    height: 70vh !important;   
+    width: auto !important;     
+    object-fit: contain !important; 
+    display: block;
+    margin-top: 20vh;
+    margin-left: 60vh;
+    margin-bottom: 20vh;
+}
 .outro{
     position: relative;
     width: 100%;
@@ -1034,4 +1046,27 @@ body {
     width: 90%;
     object-fit: cover;
     display: block;
+}
+.end-wrapper{
+    position: absolute;
+    top:400vh;
+    left: 30%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    height: 10vh;
+    width: 40vw;
+}
+.end-text{
+    font-family: gara;
+    text-align: center;
+    font-size: 1.1rem;
+    width: 100;
+    color: white;
+    padding: 1rem 2rem 5rem;
+    letter-spacing: 0.05rem;
+    max-width: 600px;
+    line-height: 1.6;
+    opacity: 0.95;
+    margin: 0 auto;
+    animation: bornSlide 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
