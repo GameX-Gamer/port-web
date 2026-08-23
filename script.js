@@ -141,3 +141,23 @@ preloadFrames().then(() => {
     console.log("Flower frames loaded");
     createScrollAnimation();
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const path = document.getElementById("stroke-path");
+    const pathLenght = path.getTotalLength();
+
+    path.style.strokeDasharray = pathLenght;
+    path.style.strokeDashoffset = pathLenght;
+
+    gsap.to(path, {
+        strokeDashoffset: 0,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".spotlight",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true
+        },
+    });
+});
