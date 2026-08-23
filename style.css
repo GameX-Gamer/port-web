@@ -893,3 +893,97 @@ body {
     line-height:0.9;
     text-align: center;
 }
+.case-sec{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background:white;
+    color:black;
+    overflow: hidden;
+    z-index: 5;
+}
+.spotlight{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding: 8vh 6vw;
+    gap:12vh;
+}
+.spotlight .row{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    gap:6vw;
+}
+.spotlight .row {
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+}
+.spotlight .first-image {
+    overflow: hidden;
+    width: 50%;
+    height: 55vh;
+}
+.spotlight .first-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.spotlight .column {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+.spotlight .card {
+    width: 75%;
+    margin: 0 auto;
+    background-color:gray;
+}
+.column{
+    width:50%;
+}
+.card{
+    max-width: 450px;
+}
+.spotlight .card h2 {
+    font-family: Poppins, sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0 0 1.5rem;
+}
+.spotlight .card p {
+    font-family: Poppins, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+.spotlight .row, .column, .first-image, .card{
+    outline: 1px solid red;
+}
+.first-image{
+    height: 55vh;
+    overflow: hidden;
+}
+.first-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.outro{
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    padding: 2rem;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
