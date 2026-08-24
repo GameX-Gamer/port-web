@@ -151,10 +151,7 @@ function createScrollAnimation() {
 }
 resizeCanvas();
 
-preloadFrames().then(() => {
-    console.log("Flower frames loaded");
-    createScrollAnimation();
-});
+createScrollAnimation();
 
 
 document.addEventListener("DOMContentLoaded", () => {
